@@ -49,7 +49,7 @@ namespace claseTres
 
             nuevaCarrera.CorrerCarrera(xTiempo);
 
-            xTiempo = xTiempo + 10;            
+            //xTiempo = xTiempo + 10;            
             
 
             Console.ReadKey();
