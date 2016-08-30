@@ -16,8 +16,8 @@ namespace claseTres
         public rueda ti;
         public rueda td;
         public static int contadorDeObjetos;
-        private int kilometrosRecorridos;
-        private int tiempoDemorado;
+        private int _kilometrosRecorridos;
+        private int _tiempoDemorado;
         private static Random numeroRandom;
 
 
@@ -71,38 +71,38 @@ namespace claseTres
 
         public void VolverACero()
         {
-            this.kilometrosRecorridos = 0;
-            this.tiempoDemorado = 0;
+            this._kilometrosRecorridos = 0;
+            this._tiempoDemorado = 0;
         }
 
         public void AgregarKilometro(int kilometros)//deprecated
         {
-            this.kilometrosRecorridos += kilometros;
+            this._kilometrosRecorridos += kilometros;
         }
 
         public int DevolverKilometro()
         {
-            return this.kilometrosRecorridos;
+            return this._kilometrosRecorridos;
         }
 
         public void AgregarTiempo(int minutos)//deprecated
         {
-            this.tiempoDemorado += minutos; 
+            this._tiempoDemorado += minutos; 
         }
 
         public int DevolverTiempo()
         {
-            return this.tiempoDemorado;
+            return this._tiempoDemorado;
         }
 
         public void Agregar(kilometro miKm)
         {
-            this.kilometrosRecorridos = miKm.cantidad;
+            this._kilometrosRecorridos = this._kilometrosRecorridos + miKm;
         }
 
         public void Agregar(tiempo miTiempo)
         {
-            this.tiempoDemorado = miTiempo.cantidad;
+            this._tiempoDemorado = miTiempo._cantidad;
         }
 
 

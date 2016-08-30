@@ -59,9 +59,9 @@ namespace claseTres
         /// Asigna kilometraje a cada auto por cada minuto que hizo de carrera. 
         /// </summary>
         /// <param name="minutos">Duracion de la carrera</param>
-        private void PorTiempo(int minutos)
+        private void PorTiempo(kilometro minutos)
         {
-            for (int i = 0; i < minutos; i++)
+            for (int i = 0; i < (int) minutos; i++)
             {
                 this.autoUno.AgregarKilometro(randomKilometro.Next(10, 100));
                 this.autoDos.AgregarKilometro(randomKilometro.Next(10, 100));
@@ -216,9 +216,9 @@ namespace claseTres
         /// Asigna a cada auto el tiempo en minutos en el cual realizo su recorrido
         /// </summary>
         /// <param name="distancia">Kilometros recorridos</param>
-        private void PorDistancia(int distancia)
+        private void PorDistancia(tiempo distancia)
         {
-            for (int i = 0; i < distancia; i++)
+            for (int i = 0; i < (int)distancia; i++)
             {
                 this.autoUno.AgregarTiempo(randomTiempo.Next(10, 100));
                 this.autoDos.AgregarTiempo(randomTiempo.Next(10, 100));
@@ -366,7 +366,7 @@ namespace claseTres
 
         public void CorrerCarrera(kilometro distancia)
         {
-            this.PorTiempo(distancia.cantidad); //distancia recorrida en x tiempo
+            this.PorTiempo(distancia); //distancia recorrida en x tiempo
 
         }//fin CorrerCarrera(Kilometro distancia)
 
@@ -374,7 +374,7 @@ namespace claseTres
 
         public void CorrerCarrera(tiempo minutos)
         {
-            this.PorDistancia(minutos.cantidad); //tiempo recorrido en x distancia
+            this.PorDistancia(minutos); //tiempo recorrido en x distancia
 
         }//fin CorrerCarrera(Tiempo minutos)
 

@@ -8,44 +8,44 @@ namespace claseTres
 {
     public class tiempo
     {
-        public int cantidad;
+        private int _cantidad;
 
         public tiempo(int minutos)
         {
-            this.cantidad = minutos;
+            this._cantidad = minutos;
         }
 
         public static tiempo operator +(tiempo tiempoUno, int valor)
         {
-            tiempoUno.cantidad += valor;
+            tiempoUno._cantidad += valor;
 
             return tiempoUno;
         }
 
         public static tiempo operator +(tiempo tiempoUno, tiempo tiempoDos)
         {
-            tiempoUno.cantidad += tiempoDos.cantidad;
+            tiempoUno._cantidad += tiempoDos._cantidad;
 
             return tiempoUno;
         }
 
         public static tiempo operator -(tiempo tiempoUno, int valor)
         {
-            tiempoUno.cantidad -= valor;
+            tiempoUno._cantidad -= valor;
 
             return tiempoUno;
         }
 
         public static tiempo operator -(tiempo tiempoUno, tiempo tiempoDos)
         {
-            tiempoUno.cantidad -= tiempoDos.cantidad;
+            tiempoUno._cantidad -= tiempoDos._cantidad;
 
             return tiempoUno;
         }
 
         public static bool operator ==(tiempo tiempoUno, int valor)
         {
-            if (tiempoUno.cantidad == valor)
+            if (tiempoUno._cantidad == valor)
                 return true;
                 return false;
 
@@ -60,7 +60,7 @@ namespace claseTres
 
         public static bool operator ==(tiempo tiempoUno, tiempo tiempoDos)
         {
-            if (tiempoUno.cantidad == tiempoDos.cantidad)
+            if (tiempoUno._cantidad == tiempoDos._cantidad)
                 return true;
             return false;
         }
@@ -83,7 +83,10 @@ namespace claseTres
             return new tiempo(numero);
 
         }
-        
 
+        public static explicit operator int(tiempo Uno)
+        {
+            return (Uno._cantidad);
+        }
     }
 }
