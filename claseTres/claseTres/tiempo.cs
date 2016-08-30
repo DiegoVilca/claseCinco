@@ -78,15 +78,40 @@ namespace claseTres
 
         }
 
-        public static explicit operator tiempo(int numero)
+        /*public static explicit operator tiempo(int numero)
         {
             return new tiempo(numero);
 
-        }
+        }*/
 
         public static explicit operator int(tiempo Uno)
         {
             return (Uno._cantidad);
+        }
+
+        public static bool operator <(tiempo tiempoUno, int valor)
+        {
+            if(tiempoUno._cantidad < valor)
+                return true;
+            return false;
+        }
+
+        public static bool operator >(tiempo tiempoUno, int valor)
+        {
+            return !(tiempoUno < valor);
+        }
+
+
+        public static bool operator <(tiempo tiempoUno, tiempo tiempoDos)
+        {
+            if (tiempoUno._cantidad < tiempoDos._cantidad)
+                return true;
+            return false;
+        }
+
+        public static bool operator >(tiempo tiempoUno, tiempo tiempoDos)
+        {
+            return !(tiempoUno < tiempoDos);
         }
     }
 }

@@ -16,8 +16,8 @@ namespace claseTres
         public rueda ti;
         public rueda td;
         public static int contadorDeObjetos;
-        private int _kilometrosRecorridos;
-        private int _tiempoDemorado;
+        private kilometro _kilometrosRecorridos;
+        private tiempo _tiempoDemorado;
         private static Random numeroRandom;
 
 
@@ -41,6 +41,10 @@ namespace claseTres
 
 
             auto.contadorDeObjetos++;
+
+            this._kilometrosRecorridos = 0; //previamente casteados a int
+            this._tiempoDemorado = 0;
+
         }
 
         //constructor estatico
@@ -82,7 +86,7 @@ namespace claseTres
 
         public int DevolverKilometro()
         {
-            return this._kilometrosRecorridos;
+            return (int)this._kilometrosRecorridos;
         }
 
         public void AgregarTiempo(int minutos)//deprecated
@@ -92,17 +96,17 @@ namespace claseTres
 
         public int DevolverTiempo()
         {
-            return this._tiempoDemorado;
+            return (int)this._tiempoDemorado;
         }
 
         public void Agregar(kilometro miKm)
         {
-            this._kilometrosRecorridos = this._kilometrosRecorridos + miKm;
+            this._kilometrosRecorridos += (int) miKm;
         }
 
         public void Agregar(tiempo miTiempo)
         {
-            this._tiempoDemorado = miTiempo._cantidad;
+            this._tiempoDemorado += (int) miTiempo;
         }
 
 

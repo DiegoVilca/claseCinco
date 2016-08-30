@@ -200,12 +200,12 @@ namespace claseTres
         private void MostrarKilometros()
         {
             Console.WriteLine("\nKilometros recorridos por competidor\n");
-            Console.WriteLine("auto 1: {0}" + this.autoUno.DevolverKilometro());
-            Console.WriteLine("auto 2: {0}" + this.autoDos.DevolverKilometro());
-            Console.WriteLine("auto 3: {0}" + this.autoTres.DevolverKilometro());
-            Console.WriteLine("auto 4: {0}" + this.autoCuatro.DevolverKilometro());
-            Console.WriteLine("auto 5: {0}" + this.autoCinco.DevolverKilometro());
-            Console.WriteLine("auto 6: {0}" + this.autoSeis.DevolverKilometro());
+            Console.WriteLine("auto 1: " + this.autoUno.DevolverKilometro());
+            Console.WriteLine("auto 2: " + this.autoDos.DevolverKilometro());
+            Console.WriteLine("auto 3: " + this.autoTres.DevolverKilometro());
+            Console.WriteLine("auto 4: " + this.autoCuatro.DevolverKilometro());
+            Console.WriteLine("auto 5: " + this.autoCinco.DevolverKilometro());
+            Console.WriteLine("auto 6: " + this.autoSeis.DevolverKilometro());
         }
 
 

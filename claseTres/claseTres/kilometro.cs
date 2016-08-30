@@ -57,16 +57,40 @@ namespace claseTres
             return new kilometro(numero);
 
         }
-
+        /*
         public static explicit operator kilometro(int numero)
         {
             return new kilometro(numero);
-        }
+        }*/
 
 
         public static explicit operator int(kilometro Uno)
         {
             return (Uno._cantidad);
+        }
+
+        public static bool operator <(kilometro kilometroUno, int valor)
+        {
+            if (kilometroUno._cantidad < valor)
+                return true;
+            return false;
+        }
+
+        public static bool operator >(kilometro kilometroUno, int valor)
+        { 
+            return !(kilometroUno < valor);
+        }
+
+        public static bool operator <(kilometro kilometroUno, kilometro kilometroDos)
+        {
+            if (kilometroUno._cantidad < kilometroDos._cantidad)
+                return true;
+            return false;
+        }
+
+        public static bool operator >(kilometro kilometroUno, kilometro kilometroDos)
+        { 
+            return !(kilometroUno < kilometroDos);
         }
 
     }
