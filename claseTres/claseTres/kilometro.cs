@@ -14,5 +14,17 @@ namespace claseTres
         {
             this.cantidad = distancia;
         }
+
+        public static kilometro operator +(kilometro kilometroUno, int valor)
+        {
+            kilometroUno.cantidad += valor;
+            return kilometroUno;
+        }
+
+        public static kilometro operator -(kilometro kilometroUno, int valor)
+        {
+            kilometroUno.cantidad += valor;
+            return kilometroUno;
+        }
     }
 }
