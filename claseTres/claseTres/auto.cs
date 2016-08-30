@@ -75,7 +75,7 @@ namespace claseTres
             this.tiempoDemorado = 0;
         }
 
-        public void AgregarKilometro(int kilometros)
+        public void AgregarKilometro(int kilometros)//deprecated
         {
             this.kilometrosRecorridos += kilometros;
         }
@@ -85,7 +85,7 @@ namespace claseTres
             return this.kilometrosRecorridos;
         }
 
-        public void AgregarTiempo(int minutos)
+        public void AgregarTiempo(int minutos)//deprecated
         {
             this.tiempoDemorado += minutos; 
         }
@@ -94,5 +94,18 @@ namespace claseTres
         {
             return this.tiempoDemorado;
         }
+
+        public void Agregar(kilometro miKm)
+        {
+            this.kilometrosRecorridos = miKm.cantidad;
+        }
+
+        public void Agregar(tiempo miTiempo)
+        {
+            this.tiempoDemorado = miTiempo.cantidad;
+        }
+
+
+
     }
 }

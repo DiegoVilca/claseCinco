@@ -23,8 +23,34 @@ namespace claseTres
 
         public static kilometro operator -(kilometro kilometroUno, int valor)
         {
-            kilometroUno.cantidad += valor;
+            kilometroUno.cantidad -= valor;
             return kilometroUno;
         }
+
+        public static bool operator ==(kilometro kilometroUno, int valor)
+        {
+            if (kilometroUno.cantidad == valor)
+                return true;
+            return false;
+        }
+
+        public static bool operator !=(kilometro kilometroUno, int valor)
+        {
+            return !(kilometroUno == valor);
+        
+        }
+
+        public static bool operator ==(kilometro kilometroUno, kilometro kilometroDos)
+        {
+            if (kilometroUno.cantidad == kilometroDos.cantidad)
+                return true;
+            return false;
+        }
+
+        public static bool operator !=(kilometro kilometroUno, kilometro kilometroDos)
+        {
+            return !(kilometroUno == kilometroDos);
+        }
+
     }
 }
