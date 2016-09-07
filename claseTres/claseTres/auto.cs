@@ -110,6 +110,18 @@ namespace claseTres
         }
 
 
+        public string Devolverstring()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("Fabricante: "+ this.fabricante);
+            sb.AppendLine("Kilometros: " + this._kilometrosRecorridos);
+            sb.AppendLine("Tiempo: " + this._tiempoDemorado);
+
+            return sb.ToString();
+        }
+
+
 
     }
 }

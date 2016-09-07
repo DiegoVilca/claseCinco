@@ -21,8 +21,12 @@ namespace claseTres
 
         public carrera()
         {
-
             ListaAutos = new List<auto>();
+
+            for (int i = 0; i < 5; i++)
+            {
+                ListaAutos.Add(new auto());
+            }
 
             //this.autoUno = new auto();
             //this.autoDos = new auto();
@@ -76,11 +80,15 @@ namespace claseTres
         /// </summary>
         public void MostrarCarrera()
         {
+            StringBuilder sb = new StringBuilder();
 
-            foreach (auto item in ListaAutos)
+            sb.AppendLine("Carrera: ");
+
+            foreach (auto item in this.ListaAutos)
             {
-                item.MostrarAuto();
+                sb.AppendLine(item.Devolverstring());
             }
+            Console.Write(sb.ToString());
             
         }
 
@@ -95,12 +103,10 @@ namespace claseTres
         {
             for (int i = 0; i < (int) minutos; i++)
             {
-                //this.autoUno.AgregarKilometro(randomKilometro.Next(10, 100));
-                //this.autoDos.AgregarKilometro(randomKilometro.Next(10, 100));
-                //this.autoTres.AgregarKilometro(randomKilometro.Next(10, 100));
-                //this.autoCuatro.AgregarKilometro(randomKilometro.Next(10, 100));
-                //this.autoCinco.AgregarKilometro(randomKilometro.Next(10, 100));
-                //this.autoSeis.AgregarKilometro(randomKilometro.Next(10, 100));
+                foreach (auto item in ListaAutos)
+                {
+                    item.AgregarKilometro(randomKilometro.Next(10, 100));
+                }
             }
 
             this.Ganador();
@@ -114,6 +120,25 @@ namespace claseTres
         /// </summary>
         private void Ganador()
         {
+            auto mayor = new auto();
+            auto menor = new auto();
+
+            for (int elemento= 0; elemento  < ListaAutos.Count(); elemento++)
+            {
+                if (elemento == 0)
+                {
+                    mayor = ListaAutos[elemento];
+                    menor = ListaAutos[elemento];
+                    continue;
+                }
+
+                if ((int)ListaAutos[elemento].DevolverKilometro() < menor.DevolverKilometro())
+                    menor = ListaAutos[elemento];
+                if ((int)ListaAutos[elemento].DevolverKilometro() > mayor.DevolverKilometro())
+                    mayor = ListaAutos[elemento];
+
+            }
+
             
         }// Fin metodo Ganador()
 
@@ -138,7 +163,10 @@ namespace claseTres
         {
             for (int i = 0; i < (int)distancia; i++)
             {
-                
+                foreach (auto item in ListaAutos)
+                {
+                    item.AgregarTiempo(randomTiempo.Next(10, 100));
+                }
             }
 
             this.GanadorTiempo();
@@ -152,6 +180,28 @@ namespace claseTres
         private void GanadorTiempo()
         {
             
+            auto mayor = new auto();
+            auto menor = new auto();
+
+            for (int elemento = 0; elemento < ListaAutos.Count(); elemento++)
+            {
+                if (elemento == 0)
+                {
+                    mayor = ListaAutos[elemento];
+                    menor = ListaAutos[elemento];
+                    continue;
+                }
+
+                if ((int)ListaAutos[elemento].DevolverTiempo() < menor.DevolverTiempo())
+                    menor = ListaAutos[elemento];
+                if ((int)ListaAutos[elemento].DevolverTiempo() > mayor.DevolverTiempo())
+                    mayor = ListaAutos[elemento];
+
+                
+            }
+
+            MostrarCarrera();
+            Console.Write("Ganador: \n" + menor.Devolverstring());
 
 
         }//Fin metodo GanadorTiempo
