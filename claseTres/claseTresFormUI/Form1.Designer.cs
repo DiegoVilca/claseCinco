@@ -205,7 +205,7 @@
             this.lbsListado.FormattingEnabled = true;
             this.lbsListado.Location = new System.Drawing.Point(43, 19);
             this.lbsListado.Name = "lbsListado";
-            this.lbsListado.Size = new System.Drawing.Size(149, 147);
+            this.lbsListado.Size = new System.Drawing.Size(295, 147);
             this.lbsListado.TabIndex = 0;
             // 
             // Form1

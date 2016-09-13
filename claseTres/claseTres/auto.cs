@@ -10,7 +10,7 @@ namespace claseTres
     {
 
         private eFabricante fabricante;
-        public string nombrePiloto;
+        private string _nombrePiloto;
 
         public rueda di;
         public rueda dd;
@@ -21,10 +21,24 @@ namespace claseTres
         private tiempo _tiempoDemorado;
         private static Random numeroRandom;
 
+        //Propiedad
+        public string NombrePiloto
+        {
+            get { return this._nombrePiloto; }
+            set { this._nombrePiloto = value; }
+        }
+        
+        public string DatosEnString
+        { 
+            get
+            {
+                return this.DevolverStringParaListado();
+            }
+        }
 
         public auto(string nombrePiloto, eFabricante fabricante) :this()
         {
-            this.nombrePiloto = nombrePiloto;
+            this._nombrePiloto = nombrePiloto;
             this.fabricante = fabricante;
         }
 
@@ -122,6 +136,17 @@ namespace claseTres
             sb.AppendLine("Fabricante: "+ this.fabricante);
             sb.AppendLine("Kilometros: " + this._kilometrosRecorridos);
             sb.AppendLine("Tiempo: " + this._tiempoDemorado);
+
+            return sb.ToString();
+        }
+
+        private string DevolverStringParaListado()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("Fabricante: " + this.fabricante);
+            sb.AppendLine(" - Piloto: " + this._nombrePiloto);
+            
 
             return sb.ToString();
         }

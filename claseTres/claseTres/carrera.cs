@@ -32,10 +32,10 @@ namespace claseTres
         {
             ListaAutos = new List<auto>();
 
-            for (int i = 0; i < 5; i++)
-            {
-                ListaAutos.Add(new auto());
-            }
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    ListaAutos.Add(new auto());
+            //}
 
             //this.autoUno = new auto();
             //this.autoDos = new auto();

@@ -29,6 +29,12 @@ namespace claseTresFormUI
             {
                 this.cmbFabricante.Items.Add(item);
             }
+
+            //Datos para test
+
+            this.txtFecha.Text = "13/09/16";
+            this.txtLugar.Text = "Avellaneda";
+            this.txtNombre.Text = "Diego";
             
         }
 
@@ -38,7 +44,7 @@ namespace claseTresFormUI
             //rueda miRueda = new rueda();
             miCarrera = new carrera(this.txtNombre.Text, this.txtFecha.Text, this.txtLugar.Text);
 
-            this.gpbCarrera.Hide();
+            this.gpbCarrera.Enabled = false;
             
         }
 
@@ -58,7 +64,7 @@ namespace claseTresFormUI
             foreach (auto item in this.miCarrera.ListaAutos)
             {
                 
-                this.lbsListado.Items.Add(item);
+                this.lbsListado.Items.Add(item.DatosEnString);
             }
         }
 
