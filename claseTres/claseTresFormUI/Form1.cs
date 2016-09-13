@@ -35,6 +35,12 @@ namespace claseTresFormUI
             this.txtFecha.Text = "13/09/16";
             this.txtLugar.Text = "Avellaneda";
             this.txtNombre.Text = "Diego";
+
+            //Correr carrera
+
+            this.cmbCorrerCarrera.Items.Add("Carrera por Tiempo");
+            this.cmbCorrerCarrera.Items.Add("Carrera por Distancia");
+            
             
         }
 
@@ -66,6 +72,12 @@ namespace claseTresFormUI
                 
                 this.lbsListado.Items.Add(item.DatosEnString);
             }
+        }
+
+
+        private void btnCorrerCarrera_Click(object sender, EventArgs e)
+        {
+            
         }
 
 

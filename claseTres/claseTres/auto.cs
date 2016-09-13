@@ -11,6 +11,11 @@ namespace claseTres
 
         private eFabricante fabricante;
         private string _nombrePiloto;
+        public string NombrePiloto
+        {
+            get { return this._nombrePiloto; }
+            set { this._nombrePiloto = value; }
+        }
 
         public rueda di;
         public rueda dd;
@@ -21,12 +26,8 @@ namespace claseTres
         private tiempo _tiempoDemorado;
         private static Random numeroRandom;
 
-        //Propiedad
-        public string NombrePiloto
-        {
-            get { return this._nombrePiloto; }
-            set { this._nombrePiloto = value; }
-        }
+        
+        
         
         public string DatosEnString
         { 
@@ -36,11 +37,10 @@ namespace claseTres
             }
         }
 
-        public auto(string nombrePiloto, eFabricante fabricante) :this()
-        {
-            this._nombrePiloto = nombrePiloto;
-            this.fabricante = fabricante;
-        }
+
+
+
+        #region Constructores
 
         // constructor de instancia
         public auto() 
@@ -66,6 +66,16 @@ namespace claseTres
 
         }
 
+
+        //Sobrecarga de constructor
+        public auto(string nombrePiloto, eFabricante fabricante)
+            : this()
+        {
+            this._nombrePiloto = nombrePiloto;
+            this.fabricante = fabricante;
+        }
+
+
         //constructor estatico
         //no acepta modificadores de visibilidad
         static auto()   
@@ -74,9 +84,12 @@ namespace claseTres
             auto.contadorDeObjetos = 0;
 
             auto.numeroRandom = new Random();
-
-            
+  
         }
+
+        #endregion 
+
+
 
         public static bool CompararAuto(auto auto1, auto auto2)
         {
@@ -140,7 +153,7 @@ namespace claseTres
             return sb.ToString();
         }
 
-        private string DevolverStringParaListado()
+        private string DevolverStringParaListado() //Es utilizada por la propiedad DatosEnString
         {
             StringBuilder sb = new StringBuilder();
 

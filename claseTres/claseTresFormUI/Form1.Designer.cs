@@ -45,8 +45,12 @@
             this.btnAgregarAuto = new System.Windows.Forms.Button();
             this.cmbFabricante = new System.Windows.Forms.ComboBox();
             this.lbsListado = new System.Windows.Forms.ListBox();
+            this.txtGanador = new System.Windows.Forms.TextBox();
+            this.btnCorrerCarrera = new System.Windows.Forms.Button();
+            this.cmbCorrerCarrera = new System.Windows.Forms.ComboBox();
             this.gpbCarrera.SuspendLayout();
             this.gpbAutos.SuspendLayout();
+            this.gpbResultados.SuspendLayout();
             this.gpbListaAutos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +87,7 @@
             this.gpbAutos.Controls.Add(this.lblNombrePiloto);
             this.gpbAutos.Controls.Add(this.txtNombrePiloto);
             this.gpbAutos.Controls.Add(this.lblFabricante);
-            this.gpbAutos.Location = new System.Drawing.Point(424, 136);
+            this.gpbAutos.Location = new System.Drawing.Point(412, 149);
             this.gpbAutos.Name = "gpbAutos";
             this.gpbAutos.Size = new System.Drawing.Size(325, 127);
             this.gpbAutos.TabIndex = 2;
@@ -92,6 +96,9 @@
             // 
             // gpbResultados
             // 
+            this.gpbResultados.Controls.Add(this.cmbCorrerCarrera);
+            this.gpbResultados.Controls.Add(this.btnCorrerCarrera);
+            this.gpbResultados.Controls.Add(this.txtGanador);
             this.gpbResultados.Location = new System.Drawing.Point(41, 136);
             this.gpbResultados.Name = "gpbResultados";
             this.gpbResultados.Size = new System.Drawing.Size(344, 127);
@@ -208,6 +215,31 @@
             this.lbsListado.Size = new System.Drawing.Size(295, 147);
             this.lbsListado.TabIndex = 0;
             // 
+            // txtGanador
+            // 
+            this.txtGanador.Location = new System.Drawing.Point(192, 90);
+            this.txtGanador.Name = "txtGanador";
+            this.txtGanador.Size = new System.Drawing.Size(100, 20);
+            this.txtGanador.TabIndex = 0;
+            // 
+            // btnCorrerCarrera
+            // 
+            this.btnCorrerCarrera.Location = new System.Drawing.Point(22, 90);
+            this.btnCorrerCarrera.Name = "btnCorrerCarrera";
+            this.btnCorrerCarrera.Size = new System.Drawing.Size(100, 23);
+            this.btnCorrerCarrera.TabIndex = 1;
+            this.btnCorrerCarrera.Text = "Correr Carrera";
+            this.btnCorrerCarrera.UseVisualStyleBackColor = true;
+            this.btnCorrerCarrera.Click += new System.EventHandler(this.btnCorrerCarrera_Click);
+            // 
+            // cmbCorrerCarrera
+            // 
+            this.cmbCorrerCarrera.FormattingEnabled = true;
+            this.cmbCorrerCarrera.Location = new System.Drawing.Point(25, 40);
+            this.cmbCorrerCarrera.Name = "cmbCorrerCarrera";
+            this.cmbCorrerCarrera.Size = new System.Drawing.Size(97, 21);
+            this.cmbCorrerCarrera.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +255,8 @@
             this.gpbCarrera.PerformLayout();
             this.gpbAutos.ResumeLayout(false);
             this.gpbAutos.PerformLayout();
+            this.gpbResultados.ResumeLayout(false);
+            this.gpbResultados.PerformLayout();
             this.gpbListaAutos.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -247,6 +281,9 @@
         private System.Windows.Forms.Label lblFabricante;
         private System.Windows.Forms.ComboBox cmbFabricante;
         private System.Windows.Forms.ListBox lbsListado;
+        private System.Windows.Forms.Button btnCorrerCarrera;
+        private System.Windows.Forms.TextBox txtGanador;
+        private System.Windows.Forms.ComboBox cmbCorrerCarrera;
     }
 }
 
