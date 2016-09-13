@@ -10,6 +10,7 @@ namespace claseTres
     {
 
         private eFabricante fabricante;
+        public string nombrePiloto;
 
         public rueda di;
         public rueda dd;
@@ -21,7 +22,11 @@ namespace claseTres
         private static Random numeroRandom;
 
 
-
+        public auto(string nombrePiloto, eFabricante fabricante) :this()
+        {
+            this.nombrePiloto = nombrePiloto;
+            this.fabricante = fabricante;
+        }
 
         // constructor de instancia
         public auto() 

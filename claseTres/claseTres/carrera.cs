@@ -8,7 +8,9 @@ namespace claseTres
 {
     public class carrera
     {
-
+        public string nombre;
+        public string fecha;
+        public string lugar;
         //Deprecated por coleccion
         //auto autoUno;
         //auto autoDos;
@@ -19,6 +21,13 @@ namespace claseTres
 
         #region constructores
 
+        public carrera(string nombre, string fecha, string lugar) :this()
+        {
+            this.nombre = nombre;
+            this.fecha = fecha;
+            this.lugar = lugar;
+
+        }
         public carrera()
         {
             ListaAutos = new List<auto>();
